@@ -4,6 +4,7 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
 	android:orientation="vertical">
 
 	<android.support.design.widget.AppBarLayout
@@ -19,29 +20,41 @@
 
 	</android.support.design.widget.AppBarLayout>
 
-	<FrameLayout
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:background="@color/colorPrimary"
-		android:orientation="vertical"
-		android:id="@+id/content_frame">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
 
-		<com.youtube.engine.widget.MeowBottomNavigation
-			android:id="@+id/bottomNavigation"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_gravity="bottom"
-			app:mbn_circleColor="#ffffff"
-			app:mbn_backgroundBottomColor="#ffffff"
-			app:mbn_countBackgroundColor="#ff6f00"
-			app:mbn_countTextColor="#ffffff"
-			app:mbn_countTypeface="fonts/SourceSansPro-Regular.ttf"
-			app:mbn_defaultIconColor="#90a4ae"
-			app:mbn_rippleColor="#2f424242"
-			app:mbn_selectedIconColor="#3c415e"
-			app:mbn_shadowColor="#1f212121"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-	</FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/content_frame"/>
+                
+        </LinearLayout>
 
+        <com.youtube.engine.widget.MeowBottomNavigation
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:mbn_circleColor="#ffffff"
+            app:mbn_backgroundBottomColor="#ffffff"
+            app:mbn_countBackgroundColor="#ff6f00"
+            app:mbn_countTextColor="#ffffff"
+            app:mbn_countTypeface="fonts/SourceSansPro-Regular.ttf"
+            app:mbn_defaultIconColor="#90a4ae"
+            app:mbn_rippleColor="#2f424242"
+            app:mbn_selectedIconColor="#3c415e"
+            app:mbn_shadowColor="#1f212121"/>
+        
+    </FrameLayout>
+    
 </LinearLayout>
 
